@@ -2,9 +2,11 @@
  * @file Image.h
  * Contains your declaration of the interface for the Image class.
  */
+#include "cs225/HSLAPixel.h"
+#include "/Users/kaz/Documents/CS225/release-f22/mp_stickers/lib/cs225/PNG.h"
 #include <vector>
 
-class Image {
+class Image : public PNG {
   public:
   Image();
   void lighten();
@@ -20,7 +22,6 @@ class Image {
   void illinify();
   void scale(double factor);
   void scale(unsigned w, unsigned h);
-
 
   private:
   int width_;
